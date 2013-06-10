@@ -1,6 +1,7 @@
 require 'test/unit'
 require_relative '../src/string_calculator'
 
+#noinspection RubyInstanceMethodNamingConvention
 class StringCalculatorTc < Test::Unit::TestCase
   def calc
     StringCalculator.new
@@ -109,19 +110,19 @@ class StringCalculatorTc < Test::Unit::TestCase
   end
 
   def test_add_threeNumbersSeparatedByMultipleCharsSeparator_returnsTheirSum
-    result = calc.add("//[***]\n1***2***3");
+    result = calc.add("//[***]\n1***2***3")
 
     assert_equal 6, result
   end
 
   def test_add_threeNumbersSeparatedByMultipleDelimiters_returnsTheirSum
-    result = calc.add("//[*][%]\n1*2%3");
+    result = calc.add("//[*][%]\n1*2%3")
 
     assert_equal 6, result
   end
 
   def test_add_threeNumbersSeparatedByMultipleCharsDelimiters_returnsTheirSum
-    result = calc.add("//[**][%%]\n1**2%%3");
+    result = calc.add("//[**][%%]\n1**2%%3")
 
     assert_equal 6, result
   end
